@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+
+        .container{
+            display: flex;
+            height: 100vh;
+        }
+
+        .login-background{
+            flex: 0.4; /* Chiếm 2/3 chiều rộng */
+            background: url('../img/images/song/exit.jpg') no-repeat center center;
+      
+        }
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-header h2 {
+            font-weight: bold;
+        }
+
+        .form-control {
+            background-color: #444;
+            color: #fff;
+            border: none;
+        }
+
+        .form-control:focus {
+            background-color: #555;
+            color: #fff;
+            box-shadow: none;
+        }
+
+        .btn-login {
+            background-color: #0ff9c6;
+            border: none;
+        }
+
+        .btn-login:hover {
+            background-color: #0ae972;
+        }
+
+        .btn-google {
+            background-color: #fff;
+            color: #444;
+            border: 1px solid #ddd;
+        }
+
+        .btn-google:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-google img {
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        .forgot-password,
+        .register-link {
+            color: #aaa;
+        }
+
+        .forgot-password:hover,
+        .register-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .info {
+            all: unset;
+            color: #fff;
+            border: 1px solid #999797;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        input:is(:focus) {
+            border: 2px solid transparent transparent;
+            transition: all 0.1s ease;
+            background: linear-gradient(#121125, #121125);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+            <!-- Nửa bên trái là background -->
+            <div class="login-background">
+            </div>
+        <div class="login-container">
+            <div class="login-container">
+                <div class="login-header">
+                    <img src="logo.png" alt="Logo" width="80" class="mb-3">
+                    <h2>Đăng nhập</h2>
+                </div>
+                <form action="/login" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email của bạn" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                    </div>
+                    <button type="submit" class="btn btn-login w-100 mb-2">Đăng nhập</button>
+                    <button type="button" class="btn btn-google w-100 mb-3">
+                        <i class="fa-brands fa-google"></i>
+                        Đăng nhập bằng Google
+                    </button>
+                    <div class="text-center">
+                        <span>Bạn chưa có tài khoản? <a href="./register.html" class="register-link">Đăng ký ngay</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
