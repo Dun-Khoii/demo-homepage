@@ -8,6 +8,69 @@
     <link rel="stylesheet" href="./css/nowPlay.css">
     <link rel="stylesheet" href="./css/sideBarStyle.css">
 
+    <style>
+        /* Thêm CSS cho nút đăng nhập và đăng ký */
+        .login-buttons{
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            
+            
+        }
+        .login-btn{
+            background-color: #1db954;
+            color: #eae2e2;
+            border: 1px solid #555;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .underline{
+            text-decoration: none;
+            color: #fff;
+        }
+        .register-btn a{
+            text-decoration: none;
+        }
+    
+        .register-btn{
+            background-color: #d9ecde;
+            color: #170202;
+            border: 1px solid #555;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-buttons button:hover {
+            background-color: #0c1d12;
+            color: #f6f4f4;
+            
+            
+        }
+        .search-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+        .search-container {
+            flex-grow: 1;
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background-color: #222;
+            color: #fff;
+        }
+        .search-input::placeholder {
+            color: #888;
+        }
+
+    </style>
+
 </head>
 <body>
     <div class="container">
@@ -27,7 +90,8 @@
                         <img src="./img/icon/library-svgrepo-com.svg"  class="menu-icon"> Librarys
                     </li>
                     <li>
-                        <img src="./img/icon/profile-1336-svgrepo-com.svg"  class="menu-icon"> Profile
+                        <img src="./img/icon/profile-1336-svgrepo-com.svg" href="./Profile/profile.html"  class="menu-icon">
+                        <a target="_blank" href="./Profile/profile.html"  class="profile-btn w3-magin-bottom">  Profile </a>
                     </li>
                 </ul>
             </nav>
@@ -54,9 +118,15 @@
 
         <main class="content">
 
+            
+
             <div class="search-section">
                 <div class="search-container">
                     <input type="text" placeholder="Search..." class="search-input">
+                </div>
+                <div class="login-buttons">
+                    <button class="login-btn"><a target="_blank" class="underline" href="./html/login.html">Đăng nhập</a></button>
+                    <button class="register-btn"><a target="_blank" class="no-underline-b" href="./html/register.html">Đăng ký</a></button>
                 </div>
             </div>
 
@@ -178,7 +248,8 @@
                 <h3>Now Playing</h3>
                 <ul>
                     <li>
-                        <img src="./img/images/song/exit.jpg" class="song-image" > 
+                        <img
+                         src="./img/images/song/exit.jpg" class="song-image" > 
                         Exit Sign - HIEUTHUHAI
                         <span class="song-duration">03:27</span>
                     </li>
